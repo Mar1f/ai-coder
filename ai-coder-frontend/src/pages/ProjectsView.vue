@@ -7,6 +7,12 @@
 </template>
 
 <script setup lang="ts">
+import { healthCheck } from '@/api/healthController.ts'
+
+healthCheck().then((res) => {
+  console.log(res)
+})
+
 // 项目页面逻辑
 </script>
 
@@ -14,4 +20,4 @@
 .projects-page {
   padding: 24px;
 }
-</style> 
+</style>
